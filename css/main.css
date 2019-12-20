@@ -1003,6 +1003,8 @@ ul.nostyle i {
 	#meet-team .team-member{ margin-bottom:25px;}
 	#meet-team .team-member .team-img, #meet-team .team-member .team-info h3 { text-align:center;}
 	#meet-team .team-member .team-info span { text-align:center; display:block;}
+	#blog .blog-post{ margin-bottom:20px;
+  }
 
 	}
 	
@@ -1010,5 +1012,25 @@ ul.nostyle i {
 	#blog .blog-post.blog-large .entry-thumbnail img, .team-img img{ width:100%;}
 	.animated-number{ height:130px; width:130px; line-height:130px; font-size:22px;}
 	#animated-number strong{ font-size:17px;}
-	#blog .blog-post.blog-large .entry-thumbnail{ padding-top:0px;}
-	}
+	#blog .blog-post.blog-large .entry-thumbnail{ padding-top:0px;
+  }
+  
+  }
+
+ .iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
