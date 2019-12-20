@@ -5,9 +5,21 @@ jQuery(function($) {'use strict';
 		Scroll();
 	});
 
-	$('.navbar-collapse ul li a').on('click', function() {  
-		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+	$('.navbar-collapse ul li a').on('click', function() {
+		try
+		{
+			$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		}
+		catch(err)
+		{
+			
+		}
+		
 		return false;
+	});
+
+	$('.tutup-menu').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
 	});
 
 	// User define function
@@ -18,8 +30,15 @@ jQuery(function($) {'use strict';
 		var rangeTop    =   200;
 		var rangeBottom =   500;
 		$('.navbar-collapse').find('.scroll a').each(function(){
-			contentTop.push( $( $(this).attr('href') ).offset().top);
+			try{
+				contentTop.push( $( $(this).attr('href') ).offset().top);
 			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+			}
+			catch(err)
+			{
+				
+			}
+			
 		})
 		$.each( contentTop, function(i){
 			if ( winTop > contentTop[i] - rangeTop ){
@@ -222,12 +241,16 @@ jQuery(function($) {'use strict';
 			scrollwheel: false,
 			center: myLatlng
 		};
+
+		console.log(document.getElementById('google-map'));
 		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
 		var marker = new google.maps.Marker({
 			position: myLatlng,
 			map: map
 		});
 	}
-	google.maps.event.addDomListener(window, 'load', initialize_map);
+	
+	
+		google.maps.event.addDomListener(window, 'idle', initialize_map);
 
 });
