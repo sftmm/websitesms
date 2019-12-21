@@ -700,15 +700,15 @@ ul.nostyle i {
 }
 #animated-number {
   padding: 87px 0 87px;
-  background: #132125 url(../images/bg.jpg) no-repeat 0 0;
+  background: #f1f1f1;
   background-size: cover;
-  color: #fff;
+  color: #000;
 }
 #animated-number h1,
 #animated-number h2,
 #animated-number h3,
 #animated-number h4 {
-  color: #fff;
+  color: #000;
 }
 #animated-number strong {
   display: block;
@@ -720,7 +720,7 @@ ul.nostyle i {
   height: 180px;
   font-size: 29px;
   line-height: 180px;
-  border: 5px solid #fff;
+  border: 5px solid #000;
   border-radius: 100px;
   margin-bottom: 20px;
 }
